@@ -1,0 +1,129 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+/* Global Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: white; /* Default text color for the app */
+}
+
+/* Streamlit specific body/main content styling */
+.stApp {
+    background-color: #556BFF; /* Main background color for the image */
+    background-image: none; /* Ensure no default Streamlit background */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header 'QUESTION' */
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900; /* Extra bold */
+    font-size: 5em; /* Larger size */
+    text-align: center;
+    color: white;
+    margin-top: 0.5em; /* Adjust as needed */
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Question box background */
+.question-box {
+    background-color: #2F3C92; /* Darker blue for the question box */
+    border-radius: 15px; /* Slightly rounded corners */
+    padding: 30px;
+    margin: 20px auto;
+    width: 80%; /* Adjust width */
+    color: white;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 1; /* Ensure it's above other elements if needed */
+}
+
+/* Answer option buttons */
+.stRadio > label {
+    background-color: #F8F8F8; /* Light gray for buttons */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px; /* Space between buttons */
+    display: flex; /* Flexbox for alignment */
+    align-items: center;
+    justify-content: flex-start; /* Align text to start */
+    height: 70px; /* Fixed height for consistency */
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #333; /* Dark text for options */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+/* Custom styling for the radio button circles (hide default) */
+.stRadio > label > div[data-baseweb="radio"] {
+    display: none; /* Hides the default Streamlit radio circle */
+}
+
+/* Style for when an option is selected */
+.stRadio > label[data-checked="true"] {
+    background-color: #FFD700; /* Yellow for selected option, like the image */
+    color: #333; /* Ensure text remains dark */
+    border: 2px solid #FFA500; /* Orange border for selection */
+}
+
+/* Styles for the "QUESTION" text at the very top */
+.styled-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 4em; /* Adjust size to match image */
+    color: white;
+    text-align: center;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 0.5em; /* Space from question box */
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+}
+
+/* Styling for the score and progress in the sidebar */
+.stSidebar .stMetric {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    color: white;
+}
+.stSidebar .stMetric > div > div:first-child { /* Label */
+    color: #bbb;
+    font-size: 0.9em;
+}
+.stSidebar .stMetric > div > div:last-child { /* Value */
+    color: white;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+/* Styling for the submit button */
+div.stButton > button {
+    background-color: #FFD700; /* Yellow button */
+    color: #2F3C92; /* Dark blue text */
+    font-weight: 900;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    transition: background-color 0.2s ease;
+}
+div.stButton > button:hover {
+    background-color: #FFA500; /* Orange on hover */
+    color: white;
+}
+
+/* Remove default Streamlit padding from main content area */
+.main > div {
+    padding-top: 0rem;
+}
